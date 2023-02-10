@@ -16,8 +16,8 @@ Notice that, considering at most one terzo per line (row, column or diagonal), t
 
 A move is thus evaluated according to these procedure:
 
-- if it leads to a 100% winning state, it obtains an absolute value of 12
-- if it leads to a 100% draw state, it obtains an absolute value of 11
+- if it leads to a win, it obtains a value of 12
+- if it leads to a draw, it obtains a value of 11
 - otherwise it obtains an absolute value between 0 and 10 (endpoints included), according to how many terzo are present in the board
 
 Notice that these values are "absolute" since, in MinMax, one player is minimizing while the other is maximizing, so the sign will be chosen accordingly to the current player.
@@ -25,6 +25,12 @@ Notice that these values are "absolute" since, in MinMax, one player is minimizi
 A side note must be done for the value of a certain draw, i.e. 11. This value has been chosen because it is preferred to do a move which certainly does not lead to a loss rather than a move which is not certain (i.e. when its value is decided by the heuristic because the subtree cannot be fully explored). This is a conservative choice based on the decision of minimizing losses whenever possible.
 
 ## Experiments
+
+myAgent vs RabdomPlayer
+
+- Results: {'win': 96, 'loss': 2, 'draw': 2} (Win rate: 96%)
+- Turn timing: { 'select': 0.011 s, 'place': 0.490 s } on average, { 'select': 0.162 s, 'place': 2.622 s } max
+- Match timing: 9.36 turns on average
 
 
 
