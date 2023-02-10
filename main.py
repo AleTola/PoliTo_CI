@@ -28,7 +28,7 @@ def main():
     num_games = 10
     for i in range(num_games):
         print("*** GAME ", {i+1}, " ***")
-        game = quarto.Quarto(1)
+        game = quarto.Quarto()
         game.set_players((RandomPlayer(game), my_Agent(game)))
         winner = game.run()
         logging.warning(f"main: Winner: player {winner}")
