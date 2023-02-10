@@ -20,7 +20,9 @@ class my_Agent(quarto.Player):
         if self.first_move:
             self.first_move = False
             return random.randint(0, (self.BOARD_SIDE ** 2) - 1)
-        return self.__minmax('choose')
+        
+        # return self.__minmax('choose')
+        return self.__minmax(False)
 
     def place_piece(self) -> tuple[int, int]:
         if self.first_move:
@@ -37,8 +39,8 @@ class my_Agent(quarto.Player):
                 for j in range(self.BOARD_SIDE):
                      if board[i, j] == -1:
                         return j, i
-
-        return self.__minmax('place')
+        # return self.__minmax('place')
+        return self.__minmax(True)
 
     def __minmax(self, action: str):
 
@@ -86,7 +88,7 @@ class my_Agent(quarto.Player):
                     return True, alpha, beta
                 return False, max(alpha, score), beta
 
-        def min_max(game: Quarto, action: str, depth: int = 0, alpha = (-math.inf, self.DEFAULT_MOVE), beta = (math.inf, self.DEFAULT_MOVE)) -> tuple[float, tuple[tuple[int, int], int]]:
+        def min_max(game: Quarto, action: bool, depth: int = 0, alpha = (-math.inf, self.DEFAULT_MOVE), beta = (math.inf, self.DEFAULT_MOVE)) -> tuple[float, tuple[tuple[int, int], int]]:
             minmax_turn = game.get_current_player()
 
             if minmax_turn == self.get_game().get_current_player():
@@ -103,14 +105,15 @@ class my_Agent(quarto.Player):
             score = math.inf * (1 if my_turn else -1), self.DEFAULT_MOVE
             winner = game.check_winner()
 
-            if action == 'place':
+            # I have to choose a place where to move the piece
+            if action == True:
                 for move in moves:
                     if game.check_finished() or winner != -1: 
                         val = get_scores(winner, minmax_turn)
                     else:
                         copy_game = deepcopy(game)
                         copy_game.place(*move)
-                        val, _ = min_max(copy_game, 'choose', depth + 1, alpha, beta)
+                        val, _ = min_max(copy_game, False, depth + 1, alpha, beta)
 
                     if my_turn == True:
                         score = min(score, (val, (-1, move)))
@@ -121,8 +124,8 @@ class my_Agent(quarto.Player):
                     if res:
                         break
                 return score
-
-            elif action == 'choose':
+            # I have to choose a piece
+            elif action == False:
                 for piece in remaining_pieces:
                     if game.check_finished() or winner != -1: 
                         val = get_scores(winner, minmax_turn)
@@ -130,7 +133,7 @@ class my_Agent(quarto.Player):
                         copy_game = deepcopy(game)
                         copy_game.select(piece)
                         copy_game._current_player = 1 - copy_game._current_player
-                        val, _ = min_max(copy_game, 'place', depth + 1, alpha, beta)
+                        val, _ = min_max(copy_game, True, depth + 1, alpha, beta)
                     
                     if my_turn == True:
                         score = min(score, (val, (piece, (-1, -1))))
@@ -143,7 +146,7 @@ class my_Agent(quarto.Player):
                 return score
 
         _, (piece, move) = min_max(self.get_game(), action)
-        if action == 'place':
+        if action == True:
             return move
         else:
             return piece

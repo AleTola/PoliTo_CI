@@ -25,7 +25,7 @@ def main():
     agent1 = 0
     agent2 = 0
 
-    num_games = 10
+    num_games = 5
     for i in range(num_games):
         print("*** GAME ", {i+1}, " ***")
         game = quarto.Quarto()
