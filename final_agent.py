@@ -9,7 +9,7 @@ from operator import and_
 
 class my_Agent(quarto.Player):  
     MAX_DEPTH = 4
-    DEFAULT_MOVE = (-1, (-1, -1))
+    NULL_MOVE = (-1, (-1, -1))
 
     def __init__(self, quarto: Quarto) -> None:
         super().__init__(quarto)
@@ -88,7 +88,7 @@ class my_Agent(quarto.Player):
                     return True, alpha, beta
                 return False, max(alpha, score), beta
 
-        def min_max(game: Quarto, action: bool, depth: int = 0, alpha = (-math.inf, self.DEFAULT_MOVE), beta = (math.inf, self.DEFAULT_MOVE)) -> tuple[float, tuple[tuple[int, int], int]]:
+        def min_max(game: Quarto, action: bool, depth: int = 0, alpha = (-math.inf, self.NULL_MOVE), beta = (math.inf, self.NULL_MOVE)) -> tuple[float, tuple[tuple[int, int], int]]:
             minmax_turn = game.get_current_player()
 
             if minmax_turn == self.get_game().get_current_player():
@@ -97,12 +97,15 @@ class my_Agent(quarto.Player):
                 my_turn = False
 
             if depth >= self.MAX_DEPTH:
-                return heuristic(game.get_board_status()) * (-1 if my_turn else 1), self.DEFAULT_MOVE
+                if my_turn == True:
+                    return -1 * heuristic(game.get_board_status()), self.NULL_MOVE
+                else:
+                    return heuristic(game.get_board_status()), self.NULL_MOVE
 
             moves = self.__get_possible_moves(game)
             remaining_pieces = self.__get_usable_pieces(game)
 
-            score = math.inf * (1 if my_turn else -1), self.DEFAULT_MOVE
+            score = math.inf * (1 if my_turn else -1), self.NULL_MOVE
             winner = game.check_winner()
 
             # I have to choose a place where to move the piece
