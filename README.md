@@ -69,5 +69,9 @@ Second Agent to Play: RandomPlayer
 
 Max Depth of Minmax: *5*
 
-- Results: {win: 98, loss: 2, draw: 0} (Win rate: 98%)
-- Match timing: 12.11 seconds on average
+- Results: {win: , loss: , draw: } (Win rate: %)
+- Match timing: seconds on average
+
+
+
+
