@@ -32,11 +32,10 @@ First Agent to Play: RandomPlayer
 
 Second Agent to Play: myAgent
 
-Max Depth of Minmax: 4
+Max Depth of Minmax: *4*
 
 - Results: {win: 989, loss: 7, draw: 4} (Win rate: 99%)
-- Turn timing: { 'select': 0.011 s, 'place': 0.490 s } on average, { 'select': 0.162 s, 'place': 2.622 s } max
-- Match timing: 9.36 turns on average
+- Match timing:  seconds on average
 
 Number of games: 1000
 
@@ -44,11 +43,10 @@ First Agent to Play: myAgent
 
 Second Agent to Play: RandomPlayer
 
-Max Depth of Minmax: 4
+Max Depth of Minmax: *4*
 
 - Results: {win: , loss: , draw: } (Win rate: %)
-- Turn timing: { 'select': 0.011 s, 'place': 0.490 s } on average, { 'select': 0.162 s, 'place': 2.622 s } max
-- Match timing: 9.36 turns on average
+- Match timing: 9.36 seconds on average
 
 ----
 
@@ -58,11 +56,10 @@ First Agent to Play: RandomPlayer
 
 Second Agent to Play: myAgent
 
-Max Depth of Minmax: 5
+Max Depth of Minmax: *5*
 
-- Results: {win: , loss: , draw: } (Win rate: %)
-- Turn timing: { 'select': 0.011 s, 'place': 0.490 s } on average, { 'select': 0.162 s, 'place': 2.622 s } max
-- Match timing: 9.36 turns on average
+- Results: {win: 99, loss: 1, draw: 0} (Win rate: 99%)
+- Match timing:  seconds on average
 
 Number of games: 100
 
@@ -70,11 +67,10 @@ First Agent to Play: myAgent
 
 Second Agent to Play: RandomPlayer
 
-Max Depth of Minmax: 5
+Max Depth of Minmax: *5*
 
 - Results: {win: , loss: , draw: } (Win rate: %)
-- Turn timing: { 'select': 0.011 s, 'place': 0.490 s } on average, { 'select': 0.162 s, 'place': 2.622 s } max
-- Match timing: 9.36 turns on average
+- Match timing: 9.36 seconds on average
 
 
 
