@@ -26,9 +26,53 @@ A side note must be done for the value of a certain draw, i.e. 11. This value ha
 
 ## Experiments
 
-myAgent vs RabdomPlayer
+Number of games: 1000
 
-- Results: {'win': 96, 'loss': 2, 'draw': 2} (Win rate: 96%)
+First Agent to Play: RandomPlayer
+
+Second Agent to Play: myAgent
+
+Max Depth of Minmax: 4
+
+- Results: {win: 96, loss: 2, draw: 2} (Win rate: 96%)
+- Turn timing: { 'select': 0.011 s, 'place': 0.490 s } on average, { 'select': 0.162 s, 'place': 2.622 s } max
+- Match timing: 9.36 turns on average
+
+Number of games: 1000
+
+First Agent to Play: myAgent
+
+Second Agent to Play: RandomPlayer
+
+Max Depth of Minmax: 4
+
+- Results: {win: 96, loss: 2, draw: 2} (Win rate: 96%)
+- Turn timing: { 'select': 0.011 s, 'place': 0.490 s } on average, { 'select': 0.162 s, 'place': 2.622 s } max
+- Match timing: 9.36 turns on average
+
+----
+
+Number of games: 100
+
+First Agent to Play: RandomPlayer
+
+Second Agent to Play: myAgent
+
+Max Depth of Minmax: 5
+
+- Results: {win: 96, loss: 2, draw: 2} (Win rate: 96%)
+- Turn timing: { 'select': 0.011 s, 'place': 0.490 s } on average, { 'select': 0.162 s, 'place': 2.622 s } max
+- Match timing: 9.36 turns on average
+
+Number of games: 100
+
+First Agent to Play: myAgent
+
+Second Agent to Play: RandomPlayer
+
+Max Depth of Minmax: 5
+
+- Results: {win: 96, loss: 2, draw: 2} (Win rate: 96%)
 - Turn timing: { 'select': 0.011 s, 'place': 0.490 s } on average, { 'select': 0.162 s, 'place': 2.622 s } max
 - Match timing: 9.36 turns on average
 
