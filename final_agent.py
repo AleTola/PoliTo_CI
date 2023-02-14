@@ -8,7 +8,7 @@ from functools import reduce
 from operator import and_
 
 class my_Agent(quarto.Player):  
-    MAX_DEPTH = 4
+    MAX_DEPTH = 5
     NULL_MOVE = (-1, (-1, -1))
 
     def __init__(self, quarto: Quarto) -> None:

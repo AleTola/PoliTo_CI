@@ -182,7 +182,7 @@ class Quarto(object):
         '''
         winner = -1
         while winner < 0 and not self.check_finished():
-            self.print()
+            # self.print()
             piece_ok = False
 
             while not piece_ok:
@@ -190,7 +190,7 @@ class Quarto(object):
 
             piece_ok = False
             self._current_player = (self._current_player + 1) % self.MAX_PLAYERS
-            self.print()
+            # self.print()
 
             while not piece_ok:
                 x, y = self.__players[self._current_player].place_piece()
@@ -200,5 +200,5 @@ class Quarto(object):
 
             winner = self.check_winner()
 
-        self.print()
+        # self.print()
         return winner

@@ -25,11 +25,11 @@ def main():
     agent1 = 0
     agent2 = 0
 
-    num_games = 5
+    num_games = 100
     for i in range(num_games):
         print("*** GAME ", {i+1}, " ***")
         game = quarto.Quarto()
-        game.set_players((RandomPlayer(game), my_Agent(game)))
+        game.set_players((my_Agent(game), RandomPlayer(game)))
         winner = game.run()
         logging.warning(f"main: Winner: player {winner}")
         if(winner == 0):
