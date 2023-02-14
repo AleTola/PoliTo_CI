@@ -34,7 +34,7 @@ Second Agent to Play: myAgent
 
 Max Depth of Minmax: 4
 
-- Results: {win: 96, loss: 2, draw: 2} (Win rate: 96%)
+- Results: {win: 989, loss: 7, draw: 4} (Win rate: 99%)
 - Turn timing: { 'select': 0.011 s, 'place': 0.490 s } on average, { 'select': 0.162 s, 'place': 2.622 s } max
 - Match timing: 9.36 turns on average
 
@@ -46,7 +46,7 @@ Second Agent to Play: RandomPlayer
 
 Max Depth of Minmax: 4
 
-- Results: {win: 96, loss: 2, draw: 2} (Win rate: 96%)
+- Results: {win: , loss: , draw: } (Win rate: %)
 - Turn timing: { 'select': 0.011 s, 'place': 0.490 s } on average, { 'select': 0.162 s, 'place': 2.622 s } max
 - Match timing: 9.36 turns on average
 
@@ -60,7 +60,7 @@ Second Agent to Play: myAgent
 
 Max Depth of Minmax: 5
 
-- Results: {win: 96, loss: 2, draw: 2} (Win rate: 96%)
+- Results: {win: , loss: , draw: } (Win rate: %)
 - Turn timing: { 'select': 0.011 s, 'place': 0.490 s } on average, { 'select': 0.162 s, 'place': 2.622 s } max
 - Match timing: 9.36 turns on average
 
@@ -72,7 +72,7 @@ Second Agent to Play: RandomPlayer
 
 Max Depth of Minmax: 5
 
-- Results: {win: 96, loss: 2, draw: 2} (Win rate: 96%)
+- Results: {win: , loss: , draw: } (Win rate: %)
 - Turn timing: { 'select': 0.011 s, 'place': 0.490 s } on average, { 'select': 0.162 s, 'place': 2.622 s } max
 - Match timing: 9.36 turns on average
 
