@@ -35,7 +35,7 @@ Second Agent to Play: myAgent
 Max Depth of Minmax: *4*
 
 - Results: {win: 989, loss: 7, draw: 4} (Win rate: 99%)
-- Match timing:  seconds on average
+- Match timing: seconds on average
 
 Number of games: 1000
 
@@ -46,7 +46,7 @@ Second Agent to Play: RandomPlayer
 Max Depth of Minmax: *4*
 
 - Results: {win: , loss: , draw: } (Win rate: %)
-- Match timing: 9.36 seconds on average
+- Match timing: seconds on average
 
 ----
 
@@ -59,7 +59,7 @@ Second Agent to Play: myAgent
 Max Depth of Minmax: *5*
 
 - Results: {win: 99, loss: 1, draw: 0} (Win rate: 99%)
-- Match timing:  seconds on average
+- Match timing:  11.35 seconds on average
 
 Number of games: 100
 
@@ -70,7 +70,7 @@ Second Agent to Play: RandomPlayer
 Max Depth of Minmax: *5*
 
 - Results: {win: , loss: , draw: } (Win rate: %)
-- Match timing: 9.36 seconds on average
+- Match timing: seconds on average
 
 
 
